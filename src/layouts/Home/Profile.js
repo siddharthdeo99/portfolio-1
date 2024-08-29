@@ -58,8 +58,8 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 secondary
                 className={styles.button}
                 data-visible={visible}
-                href="/contact"
-                icon="send"
+                href="https://matrix.to/#/@tomas:tomasps.com"
+                icon="message"
               >
                 Send me a message
               </Button>
