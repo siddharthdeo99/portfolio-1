@@ -58,7 +58,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 secondary
                 className={styles.button}
                 data-visible={visible}
-                href="/contact"
+                onClick={() => window.location.href = "mailto:contact@tomasps.com"}
                 icon="mail"
               >
                 Send me a message
