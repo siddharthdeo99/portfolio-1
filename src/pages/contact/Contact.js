@@ -1,23 +1,23 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Mail, Twitter, Hash, Github, Check, Copy } from "lucide-react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Link from 'next/link'
 
 export default function Component() {
-  const [copied, setCopied] = useState<string | null>(null)
+  const [copied, setCopied] = useState(null)
   const { scrollYProgress } = useScroll()
   const y = useTransform(scrollYProgress, [0, 1], [0, -50])
 
   const contactInfo = [
-    { icon: <Mail className="w-5 h-5" />, label: 'Email', value: 'contact@example.com', href: 'mailto:contact@tomasps.com' },
-    { icon: <Twitter className="w-5 h-5" />, label: 'Twitter', value: '@example', href: 'https://twitter.com/toomas_ps' },
-    { icon: <Hash className="w-5 h-5" />, label: 'Matrix', value: '@user:matrix.org', href: 'https://matrix.to/#/@tomas:tomasps.com' },
-    { icon: <Github className="w-5 h-5" />, label: 'GitHub', value: 'github.com/example', href: 'https://github.com/tresillo2017' },
+    { icon: <Mail className="w-5 h-5" />, label: 'Email', value: 'contact@tomasps.com.com', href: 'mailto:contact@tomasps.com.com' },
+    { icon: <Twitter className="w-5 h-5" />, label: 'Twitter', value: '@toomas_ps', href: 'https://twitter.com/toomas_ps' },
+    { icon: <Hash className="w-5 h-5" />, label: 'Matrix', value: '@tomas:tomasps.com', href: 'https://matrix.to/#/@tomas:tomasps.com' },
+    { icon: <Github className="w-5 h-5" />, label: 'GitHub', value: 'github.com/tresillo2017', href: 'https://github.com/tresillo2017' },
   ]
 
-  const copyToClipboard = (text: string) => {
+  const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text)
     setCopied(text)
     setTimeout(() => setCopied(null), 2000)
@@ -45,8 +45,16 @@ export default function Component() {
             transition={{ duration: 0.5 }}
             className="text-5xl font-bold mb-6 mt-16 text-center text-white"
           >
-            TomasPS
+            John Doe
           </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="text-center text-lg mb-12 text-[#b0b0b0]"
+          >
+            Full-stack Developer | Open Source Enthusiast
+          </motion.p>
         </header>
         <main className="w-full max-w-md mx-auto">
           <motion.div 
@@ -86,16 +94,6 @@ export default function Component() {
             ))}
           </motion.div>
         </main>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.5 }}
-          className="mt-16 text-center text-[#b0b0b0]"
-        >
-          <p className="mb-4">
-            Made with ❤️ by TomasPS
-          </p>
-        </motion.div>
       </motion.div>
     </div>
   )
