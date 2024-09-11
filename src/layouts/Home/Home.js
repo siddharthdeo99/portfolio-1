@@ -81,24 +81,25 @@ export const Home = () => {
         scrollIndicatorHidden={scrollIndicatorHidden}
       />
       <ProjectSummary
-  id="project-1"
-  sectionRef={projectOne}
-  visible={visibleSections.includes(projectOne.current)}
-  index={1}
-  title="Hybrid Wells Turbines with PVEH for Coastal Regions"
-  description="Design and Multi-Perspective based Comprehensive Computational Investigations of Hybrid Wells Turbines patched with PVEH devices for Coastal Regions: Validated Approaches."
-  buttonText="View more"
-  buttonLink="/projects/tesla-dashboard"
->
-  <Image
-    reveal
-    delay={100}
-    placeholder={sprTexturePlaceholder}
-    srcSet={[sprTexture, sprTextureLarge]}
-    sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
-    alt="Screenshot of the current UI"
-  />
-</ProjectSummary>
+        id="project-1"
+        sectionRef={projectOne}
+        visible={visibleSections.includes(projectOne.current)}
+        index={1}
+        title="Hybrid Wells Turbines with PVEH for Coastal Regions"
+        description="Design and Multi-Perspective based Comprehensive Computational Investigations of Hybrid Wells Turbines patched with PVEH devices for Coastal Regions: Validated Approaches."
+        buttonText="View more"
+        buttonLink="/projects/tesla-dashboard"
+        model={{
+          type: 'laptop',
+          alt: 'Screenshot of the current UI',
+          textures: [
+            {
+              srcSet: [sprTexture, sprTextureLarge],
+              placeholder: sprTexturePlaceholder,
+            },
+          ],
+        }}
+      />
       {/* <ProjectSummary
         id="project-2"
         alternate

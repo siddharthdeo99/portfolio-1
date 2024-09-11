@@ -1,12 +1,9 @@
 module.exports = {
-  reactStrictMode: true,  // Enables React strict mode
-  trailingSlash: true,    // Adds trailing slash to URLs
-  pageExtensions: ['page.js', 'api.js'],  // Custom page and API file extensions
-
-  // Custom Webpack configuration
+  reactStrictMode: true,
+  trailingSlash: true,
+  pageExtensions: ['page.js', 'api.js'],
   webpack(config, { isServer }) {
-
-    // Run custom scripts only on the server
+    // Run custom scripts
     if (isServer) {
       require('./scripts/generate-sitemap');
       require('./scripts/draco');
@@ -15,17 +12,17 @@ module.exports = {
     // Import `svg` files as React components
     config.module.rules.push({
       test: /\.svg$/,
-      resourceQuery: { not: [/url/] },  // Prevents loading SVGs as URLs
+      resourceQuery: { not: [/url/] },
       use: [{ loader: '@svgr/webpack', options: { svgo: false } }],
     });
 
-    // Import videos, models, HDRs, and fonts
+    // Import videos, models, hdrs, and fonts
     config.module.rules.push({
-      test: /\.(mp4|hdr|glb|woff|woff2)$/i,  // Regex to match file types
+      test: /\.(mp4|hdr|glb|woff|woff2)$/i,
       type: 'asset/resource',
     });
 
-    // Force URL import with `?url`
+    // Force url import with `?url`
     config.module.rules.push({
       resourceQuery: /url/,
       type: 'asset/resource',
@@ -38,11 +35,5 @@ module.exports = {
     });
 
     return config;
-  },
-
-  // Image optimization configuration (without experimental)
-  images: {
-    deviceSizes: [640, 768, 1024, 1280, 1600],  // Example for responsive images
-    imageSizes: [16, 32, 48, 64, 96],  // Add custom sizes for static images
   },
 };
