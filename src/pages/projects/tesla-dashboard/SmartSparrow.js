@@ -70,14 +70,15 @@ import styles from './SmartSparrow.module.css';
 const Earth = dynamic(() => import('./Earth').then(mod => mod.Earth));
 const EarthSection = dynamic(() => import('./Earth').then(mod => mod.EarthSection));
 
-const title = 'Tesla Dashboard for Beamng Drive';
+const title = 'Hybrid Wells Turbines with PVEH for Coastal Regions';
 const description =
-  'Wanted to have a tesla screen on beamng drive, now you can with simhub.';
+'Design and Multi-Perspective based Comprehensive Computational Investigations of Hybrid Wells Turbines patched with PVEH devices for Coastal Regions: Validated Approaches';
 const roles = [
-  'RPM',
-  'FuelLight',
-  'Blinkers',
-  'Over speed warning',
+  'Hybrid Wells Turbines',
+  'Wells Turbine Performance',
+  'Computational Hydrodynamic Analysis',
+  'Structural Integrity Assessment',
+  'Unmanned Vehicle Integration',
 ];
 
 export const SmartSparrow = () => {
@@ -104,7 +105,7 @@ export const SmartSparrow = () => {
         <ProjectHeader
           title={title}
           description={description}
-          url="https://tesladashboard.tomasps.com"
+          url="https://janakrawal.com/report.docx"
           roles={roles}
         />
         <ProjectSection padding="top">

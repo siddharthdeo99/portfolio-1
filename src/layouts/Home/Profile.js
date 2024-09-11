@@ -1,7 +1,7 @@
 import profileKatakana from 'assets/katakana-profile.svg?url';
 import profileImgLarge from 'assets/profile-large.jpg';
 import profileImgPlaceholder from 'assets/profile-placeholder.jpg';
-import profileImg from 'assets/profile.jpg';
+import profileImg from 'assets/profile-large.jpg';
 import { Button } from 'components/Button';
 import { DecoderText } from 'components/DecoderText';
 import { Divider } from 'components/Divider';
@@ -21,16 +21,18 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Tomas, currently I live in Spain currently working in{' '}
-      <Link href="https://spainrp.me">SpainRP</Link>. My projects include UX design, UI
-      animations, and icon illustration. Being comfortable with code allows me to rapidly
-      prototype and validate experiences. If you’re interested in the tools and software I
-      use check out my <Link href="/uses">uses page</Link>.
+    Hello, I’m an Janak M Rawal, an aeronautical engineer. My passion lies in designing and developing aircraft, from airplanes to spacecraft.
+
     </Text>
+    <h4>Career Objective</h4><br />
+
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to take photos to things I see and like{' '}
-      <Link href="https://photography.tomasps.com">Website</Link>.
+    Seeking a challenging and innovative position in a dynamic firm that maximizes opportunities to implement a diverse skill set and knowledge, leveraging capabilities to drive the growth and success of the organization while continuously enhancing professional development.
     </Text>
+    <br /><h4>Educational Background</h4><br />
+    <Text size="l" as="p">
+  I completed my BE Degree from Coimbatore Kumaraguru College of Technology, affiliated with Anna University. Currently, I am pursuing an MBA in Aviation Management at the <Link href="https://www.upes.ac.in/">University of Petroleum and Energy Studies (UPES)</Link>, School of Business, specializing in Aviation Management.
+  </Text>
   </Fragment>
 );
 
@@ -58,7 +60,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 secondary
                 className={styles.button}
                 data-visible={visible}
-                href="mailto:contact@tomasps.com"
+                href="mailto:jmrawal7@gmail.com"
                 icon="send"
               >
                 Send me a message

@@ -4,36 +4,27 @@ export const navLinks = [
     pathname: '/#project-1',
   },
   {
-    label: 'Details',
+    label: 'About Me',
     pathname: '/#details',
   },
   {
-    label: 'Articles',
-    pathname: '/articles',
+    label: 'Linkedin',
+    pathname: 'http://linkedin.com/in/janak-rawal-a52035247',
   },
   // {
   //   label: 'Contact',
   //   pathname: '/contact',
   // },
-  {
-    label: 'Photography',
-    pathname: 'https://photography.tomasps.com',
-  },
-  {
-    label: 'Drive',
-    pathname: 'https://drive.tomasps.com',
-  },
+  // {
+  //   label: 'Photography',
+  //   pathname: 'https://photography.tomasps.com',
+  // },
+  // {
+  //   label: 'Drive',
+  //   pathname: 'https://drive.tomasps.com',
+  // },
 ];
 
 export const socialLinks = [
-  {
-    label: 'Twitter',
-    url: 'https://twitter.com/toomas_ps',
-    icon: 'twitter',
-  },
-  {
-    label: 'Github',
-    url: 'https://github.com/Tresillo2017',
-    icon: 'github',
-  },
+
 ];

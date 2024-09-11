@@ -17,9 +17,7 @@ import { Profile } from 'layouts/Home/Profile';
 import { ProjectSummary } from 'layouts/Home/ProjectSummary';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
-import { Helmet } from 'react-helmet';
-
-const disciplines = ['Developer', 'Photographer', 'Helper'];
+const disciplines = ['Aircraft designer', 'Aviation management', 'Product developer'];
 
 
 
@@ -34,7 +32,7 @@ export const Home = () => {
   
   
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, projectOne, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -71,13 +69,10 @@ export const Home = () => {
 
   return (
     <div className={styles.home}>
-      <Helmet>
-      <script defer src="https://analytics.tomasps.com/script.js" data-hash></script>
-    </Helmet>
+
       <Meta
-        title="Designer + Developer"
-        description="Design portfolio of TomasPS — a product designer working on web & mobile
-          apps with a focus on motion, experience design, and accessibility."
+        title="Aeronautical Engineer"
+       
       />
       <Intro
         id="intro"
@@ -90,8 +85,8 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Tesla-Dashboard"
-        description="Tesla dashboard for beamng drive"
+        title="Hybrid Wells Turbines with PVEH for Coastal Regions"
+        description="Design and Multi-Perspective based Comprehensive Computational Investigations of Hybrid Wells Turbines patched with PVEH devices for Coastal Regions: Validated Approaches."
         buttonText="View more"
         buttonLink="/projects/tesla-dashboard"
         model={{
@@ -105,7 +100,7 @@ export const Home = () => {
           ],
         }}
       />
-      <ProjectSummary
+      {/* <ProjectSummary
         id="project-2"
         alternate
         sectionRef={projectTwo}
@@ -149,7 +144,7 @@ export const Home = () => {
             },
           ],
         }}
-      />
+      /> */}
       <Profile
         sectionRef={details}
         visible={visibleSections.includes(details.current)}
