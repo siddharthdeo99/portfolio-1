@@ -18,10 +18,10 @@ import imageSprDesignSystemLightPlaceholder from 'assets/spr-design-system-light
 import imageSprDesignSystemLight from 'assets/spr-design-system-light.png';
 import imageSprLessonBuilderDarkLarge from 'assets/spr-lesson-builder-dark-large.jpg';
 import imageSprLessonBuilderDarkPlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
-import imageSprLessonBuilderDark from 'assets/spr-lesson-builder-dark.jpg';
+import imageSprLessonBuilderDark from 'assets/spr-lesson-builder-dark-large.jpg';
 import imageSprLessonBuilderLightLarge from 'assets/spr-lesson-builder-light-large.jpg';
 import imageSprLessonBuilderLightPlaceholder from 'assets/spr-lesson-builder-light-placeholder.jpg';
-import imageSprLessonBuilderLight from 'assets/spr-lesson-builder-light.jpg';
+import imageSprLessonBuilderLight from 'assets/spr-lesson-builder-light-large.jpg';
 import videoSprMotionLarge from 'assets/spr-motion-large.mp4';
 import videoSprMotionPlaceholder from 'assets/spr-motion-placeholder.jpg';
 import videoSprMotion from 'assets/spr-motion.mp4';
