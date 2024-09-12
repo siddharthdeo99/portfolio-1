@@ -14,7 +14,7 @@ const ses = new aws.SES({
   region: 'us-east-1',
 });
 
-const ORIGINS = ['https://tomasps.com', 'https://www.tomasps.com'];
+const ORIGINS = ['https://janakrawal.com', 'https://www.janakrawal.com'];
 const MAX_EMAIL_LENGTH = 512;
 const MAX_MESSAGE_LENGTH = 4096;
 const EMAIL = 'contact@tomasps.com';
